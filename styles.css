@@ -1,0 +1,93 @@
+html {
+    
+    font-size: 16px;
+}
+
+h2 {
+    
+    margin-left: 1em;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-family: oswald;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+h3 {
+    
+    font-family: oswald;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.banner {
+
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: #61787F;
+    height: 9rem;
+}
+
+.banner p {
+
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 300;
+    width: 100%;
+}
+
+.banner img{
+
+    position:absolute;
+    left: 2rem;
+}
+
+.best-movie-container {
+
+    position: relative;
+    width: 80%;
+    margin:0 auto;
+    border: solid;
+    border-width: 0.6em;
+    border-color: black;
+    padding: 1em;
+    
+}
+
+.best-movie-card {
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2em
+}
+
+.best-movie-content {
+
+    font-family: oswald;
+    font-weight: 200;
+    font-size: 1.5em;
+}
+
+.details-button {
+
+    position: absolute;
+    right: 1.5em;
+    bottom: 0.5em;
+    border: none;
+    font-family: oswald, sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: white;
+    padding: 0.5rem 3rem;
+    background-color: red;
+    border-radius: 3em;
+    align-content: space-between;
+
+}
