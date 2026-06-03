@@ -1,93 +1,360 @@
 html {
-    
     font-size: 16px;
 }
 
-h2 {
-    
-    margin-left: 1em;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    font-family: oswald;
-    font-weight: 600;
-    font-size: 2.5rem;
-}
-
-h3 {
-    
-    font-family: oswald;
-    font-weight: 600;
-    font-size: 2.5rem;
+body {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
 }
 
 .banner {
-
-    position: relative;
-    width: 80%;
+    width: 77%;
+    height: 9rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    gap: 2rem;
     background-color: #61787F;
-    height: 9rem;
+}
+
+.banner img {
+    height: 120px;
+    width: auto;
 }
 
 .banner p {
-
     color: white;
-    text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 300;
-    width: 100%;
 }
 
-.banner img{
-
-    position:absolute;
-    left: 2rem;
+h2 {
+    width: 77%;
+    margin: 1.5rem auto 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .best-movie-container {
-
-    position: relative;
-    width: 80%;
-    margin:0 auto;
-    border: solid;
-    border-width: 0.6em;
-    border-color: black;
-    padding: 1em;
-    
+    width: 77%;
+    margin: 0 auto;
+    border: 8px solid black;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .best-movie-card {
-
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    gap: 2em
+    align-items: center;
+    gap: 2rem;
+}
+
+.best-movie-card img {
+    width: 230px;
+    height: 330px;
+    object-fit: cover;
 }
 
 .best-movie-content {
+    flex: 1;
+}
 
-    font-family: oswald;
-    font-weight: 200;
-    font-size: 1.5em;
+.best-movie-content h3 {
+    margin: 0 0 2rem;
+    font-size: 2.5rem;
+}
+
+.best-movie-content p {
+    font-size: 1.2rem;
+}
+
+.best-movie-details-button {
+    float: right;
+    border: none;
+    border-radius: 999px;
+    padding: 0.5rem 2rem;
+    background-color: red;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.grid-container {
+    width: 77%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.movie-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.bandeau-vignette {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    height: 22%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.bandeau-vignette h4 {
+    margin: 0;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    right: 7rem;
+    color: white;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .details-button {
-
     position: absolute;
-    right: 1.5em;
-    bottom: 0.5em;
+    right: 1rem;
+    bottom: 0.5rem;
     border: none;
-    font-family: oswald, sans-serif;
-    font-weight: 500;
-    font-size: 1.5em;
+    border-radius: 999px;
+    padding: 0.3rem 1rem;
+    background-color: #2d2a2a;
     color: white;
-    padding: 0.5rem 3rem;
-    background-color: red;
-    border-radius: 3em;
-    align-content: space-between;
+    font-family: "Oswald", sans-serif;
+    cursor: pointer;
+}
 
+#category-select {
+    display: block;
+    width: 77%;
+    margin: 0 auto 2rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+}
+
+.see-more-button {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background-color: white;
+    border: 5px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+}
+
+.modal-infos {
+    order: 1;
+    flex: 1;
+    min-width: 0;
+}
+
+.modal-image {
+    order: 2;
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+.modal-description {
+    order: 3;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.modal-actors {
+    order: 4;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.close-modal-button {
+    order: 5;
+    display: block;
+    margin: 3rem auto 0;
+    border: none;
+    border-radius: 999px;
+    padding: 0.6rem 4rem;
+    background-color: red;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.modal-infos h2 {
+    width: auto;
+    margin: 0 0 1rem;
+    font-size: 3rem;
+}
+
+.modal-infos p {
+    margin: 0.3rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.modal-directors {
+    margin-top: 3rem;
+}
+
+.modal-directors p {
+    font-weight: 400;
+}
+
+.close-mobile-button {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .banner {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .banner p {
+        display: none;
+    }
+
+    h2 {
+        width: 90%;
+        font-size: 2rem;
+    }
+
+    .best-movie-container {
+        width: 90%;
+    }
+
+    .best-movie-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .best-movie-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .best-movie-details-button {
+        float: none;
+        display: block;
+        margin: 1rem auto 0;
+    }
+
+    .grid-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .top-rated-grid:not(.is-open) .movie-card:nth-child(n+3) {
+        display: none;
+    }
+
+    .see-more-button {
+        display: block;
+        margin: 2rem auto;
+        border: none;
+        border-radius: 999px;
+        padding: 0.5rem 2rem;
+        background-color: red;
+        color: white;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .modal {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1.5rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .modal-infos {
+        order: 1;
+        width: 100%;
+    }
+
+    .modal-description {
+        order: 2;
+        width: 100%;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .modal-image {
+        order: 3;
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    .modal-actors {
+        order: 4;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .modal-infos h2 {
+        font-size: 2rem;
+        padding-right: 2rem;
+    }
+
+    .modal-infos p {
+        font-size: 1rem;
+    }
+
+    .close-modal-button {
+        display: none;
+    }
+
+    .close-mobile-button {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        background: none;
+        color: red;
+        font-size: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
 }
