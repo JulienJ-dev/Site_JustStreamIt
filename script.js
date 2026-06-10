@@ -23,7 +23,7 @@ async function getMovieDetails(movieUrl) {
 function createMovieCard(movie) {
     return `
         <article class="movie-card">
-            <img src="${movie.image_url}" alt="Affiche de ${movie.title}">
+            <img class="movie-image" src="${movie.image_url}" alt="Affiche de ${movie.title}" data-url="${movie.url}" >
 
             <div class="bandeau-vignette">
                 <h4>${movie.title}</h4>
@@ -51,7 +51,7 @@ async function displayBestMovie() {
     const container = document.querySelector(".best-movie-card");
 
     container.innerHTML = `
-        <img src="${movie.image_url}" alt="Affiche de ${movie.title}">
+        <img class="best-movie-image" src="${movie.image_url}" alt="Affiche de ${movie.title}" data-url="${movie.url}">
 
         <div class="best-movie-content">
             <h3>${movie.title}</h3>
@@ -128,7 +128,9 @@ function setupEvents() {
     document.addEventListener("click", function (event) {
         if (
             event.target.classList.contains("details-button") ||
-            event.target.classList.contains("best-movie-details-button")
+            event.target.classList.contains("best-movie-details-button") ||
+            event.target.classList.contains("best-movie-image") ||
+            event.target.classList.contains("movie-image")
         ) {
             openModal(event.target.dataset.url);
         }

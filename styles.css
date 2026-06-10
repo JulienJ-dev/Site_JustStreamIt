@@ -135,6 +135,16 @@ h2 {
     cursor: pointer;
 }
 
+.best-movie-image {
+
+    cursor: pointer;
+}
+
+.movie-image {
+
+    cursor: pointer;
+}
+
 #category-select {
     display: block;
     width: 77%;
