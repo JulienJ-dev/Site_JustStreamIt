@@ -358,12 +358,12 @@ h2 {
     .close-mobile-button {
         display: block;
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 2rem;
+        right: 2.5rem;
         border: none;
         background: none;
         color: red;
-        font-size: 2rem;
+        font-size: 4rem;
         font-weight: 700;
         cursor: pointer;
     }
